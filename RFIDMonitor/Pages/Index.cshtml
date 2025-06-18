@@ -1,0 +1,21 @@
+﻿@page
+@model RFIDMonitor.Pages.IndexModel
+
+<h1>RFID Log Data</h1>
+<table>
+    <thead>
+        <tr>
+            <th class="column1">RFID ID</th>
+            <th class="column2">Scanned Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var logData in Model.LogDataList)
+        {
+            <tr>
+                <td class="column1">@logData.RFIDID</td>
+                <td class="column2">@logData.ScannedDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
